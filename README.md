@@ -1,4 +1,8 @@
-# Websites VS Webapps
+# WeTube
+
+Cloninig Youtube with Vanilla and NodeJS
+
+<!-- # Websites VS Webapps
 - Websites: 컨텐츠를 생산하는 것이 아닌 단순히 소비하는 경우, 무언가 만들어 내지 않는, 인터렉티브 요소가 없는
 
 - Webapps: 인터렉티브 요소가 있는
@@ -42,4 +46,4 @@ NodeJS에서 작동하는 프레임워크
 
 > npm i dotenv
 
-> npm i multer : file URL 생성
+> npm i multer : file URL 생성 -->
