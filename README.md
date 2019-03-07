@@ -2,6 +2,18 @@
 
 Cloninig Youtube with Vanilla and NodeJS
 
+## Pages:
+- [ ] Home
+- [x] Join
+- [x] Login
+- [x] Search
+- [ ] User Detail
+- [ ] Edit Profile
+- [ ] Change Password
+- [ ] Upload
+- [ ] Video Detail
+- [ ] Edit Video
+
 <!--
 # Websites VS Webapps
 - Websites: 컨텐츠를 생산하는 것이 아닌 단순히 소비하는 경우, 무언가 만들어 내지 않는, 인터렉티브 요소가 없는
@@ -86,6 +98,25 @@ logging에 도움을 주는 Middleware
 
 ---
 
+## Views
+
+### Setting Views Template
+```
+$ npm i pug
+```
+
+```
+# app.js
+...
+
+app.set("view engine", "[Template]");
+
+# routes
+~ res.render("[fileName]");
+```
+
+---
+
 ## Database
 
 ### SQL
@@ -97,6 +128,8 @@ logging에 도움을 주는 Middleware
 > npm i dotenv
 
 > npm i multer : file URL 생성 
+
+---
 
 # Linux
 
