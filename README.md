@@ -2,6 +2,18 @@
 
 Cloninig Youtube with Vanilla and NodeJS
 
+## Pages:
+- [ ] Home
+- [x] Join
+- [x] Login
+- [x] Search
+- [ ] User Detail
+- [ ] Edit Profile
+- [ ] Change Password
+- [ ] Upload
+- [ ] Video Detail
+- [ ] Edit Video
+
 <!--
 # Websites VS Webapps
 - Websites: 컨텐츠를 생산하는 것이 아닌 단순히 소비하는 경우, 무언가 만들어 내지 않는, 인터렉티브 요소가 없는
@@ -86,17 +98,71 @@ logging에 도움을 주는 Middleware
 
 ---
 
+## Views
+
+### Setting Views Template
+```
+$ npm i pug
+```
+
+```
+# app.js
+...
+
+app.set("view engine", "[Template]");
+
+# routes
+~ res.render("[fileName]");
+```
+
+---
+
 ## Database
 
 ### SQL
 
 ### NoSQL
 
+### MongoDB
+1. MonogDB 설치
+2. Bash, mongod 실행
+3. mongo 실행
+
+위 단계를 걸치면 성공.
+
+### Mongoose
+```
+$npm i mongoose
+```
+
+#### Local 연결
+```
+mongoose.cennect("mongodb://localhost:포트번호/Database 이름");
+```
+
+### dotenv
+```
+$npm i dotenv
+```
+
+환경에서 숨기고자 하는 data를 암호화하여 사용할 수 있도록 한다.
+
+```
+import dotenv from "dotenv";
+dotenv.config();
+```
+
+`process.env.${상수}` 로 불러와 사용
+
 ---
 
-> npm i dotenv
+## Multeer
+```
+# file을 Upload하여 URL을 반환하는 middleware
+$npm i multer
+```
 
-> npm i multer : file URL 생성 
+---
 
 # Linux
 
