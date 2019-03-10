@@ -123,11 +123,44 @@ app.set("view engine", "[Template]");
 
 ### NoSQL
 
+### MongoDB
+1. MonogDB 설치
+2. Bash, mongod 실행
+3. mongo 실행
+
+위 단계를 걸치면 성공.
+
+### Mongoose
+```
+$npm i mongoose
+```
+
+#### Local 연결
+```
+mongoose.cennect("mongodb://localhost:포트번호/Database 이름");
+```
+
+### dotenv
+```
+$npm i dotenv
+```
+
+환경에서 숨기고자 하는 data를 암호화하여 사용할 수 있도록 한다.
+
+```
+import dotenv from "dotenv";
+dotenv.config();
+```
+
+`process.env.${상수}` 로 불러와 사용
+
 ---
 
-> npm i dotenv
-
-> npm i multer : file URL 생성 
+## Multeer
+```
+# file을 Upload하여 URL을 반환하는 middleware
+$npm i multer
+```
 
 ---
 

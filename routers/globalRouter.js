@@ -1,12 +1,12 @@
 import exrpess from "express";
 import routes from "../routes";
 import { home, search } from "../controller/videoController";
-import { 
-    getJoin, 
-    postJoin, 
-    getLogin, 
-    postLogin,
-    logout 
+import {
+  getJoin,
+  postJoin,
+  getLogin,
+  postLogin,
+  logout
 } from "../controller/userController";
 
 const globalRouter = exrpess.Router();
