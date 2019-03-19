@@ -1,32 +1,53 @@
 {
-  "name": "wetube",
-  "version": "1.0.0",
-  "description": "Cloninig Youtube with Vanilla and NodeJS",
-  "author": "j__kun",
-  "dependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.3.4",
-    "body-parser": "^1.18.3",
-    "cookie-parser": "^1.4.4",
-    "dotenv": "^6.2.0",
-    "express": "^4.16.4",
-    "helmet": "^3.15.1",
-    "mongoose": "^5.4.17",
-    "morgan": "^1.9.1",
-    "multer": "^1.4.1",
-    "pug": "^2.0.3"
-  },
-  "devDependencies": {
-    "eslint": "^5.15.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "nodemon": "^1.18.10",
-    "prettier": "^1.16.4"
-  },
-  "scripts": {
-    "start": "nodemon --exec babel-node init.js --delay 2"
-  }
+    "name": "wetube",
+    "version": "1.0.0",
+    "description": "Cloninig Youtube with Vanilla and NodeJS",
+    "author": "j__kun",
+    "dependencies": {
+        "@babel/core": "^7.3.4",
+        "@babel/node": "^7.2.2",
+        "@babel/polyfill": "^7.2.5",
+        "@babel/preset-env": "^7.3.4",
+        "autoprefixer": "^9.4.10",
+        "babel-loader": "^8.0.5",
+        "body-parser": "^1.18.3",
+        "connect-mongo": "^2.0.3",
+        "cookie-parser": "^1.4.4",
+        "cross-env": "^5.2.0",
+        "css-loader": "^2.1.1",
+        "dotenv": "^6.2.0",
+        "express": "^4.16.4",
+        "express-session": "^1.15.6",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "helmet": "^3.15.1",
+        "mongoose": "^5.4.17",
+        "morgan": "^1.9.1",
+        "multer": "^1.4.1",
+        "node-sass": "^4.11.0",
+        "passport": "^0.4.0",
+        "passport-facebook": "^3.0.0",
+        "passport-github": "^1.1.0",
+        "passport-local": "^1.0.0",
+        "passport-local-mongoose": "^5.0.1",
+        "postcss-loader": "^3.0.0",
+        "pug": "^2.0.3",
+        "sass-loader": "^7.1.0",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.2.3"
+    },
+    "devDependencies": {
+        "eslint": "^5.15.1",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-config-prettier": "^4.1.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-prettier": "^3.0.1",
+        "nodemon": "^1.18.10",
+        "prettier": "^1.16.4"
+    },
+    "scripts": {
+        "dev:server": "nodemon --exec babel-node init.js --delay 2 --ignore '.scss' --ignore 'static'",
+        "dev:assets": "webpack -w --mode=development",
+        "build:assets": "webpack -w --mode=production",
+        "tunnel": "lt --port 4000"
+    }
 }

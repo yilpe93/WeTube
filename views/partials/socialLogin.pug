@@ -1,9 +1,11 @@
 .social-login
-    button.socila-login__github
-        span
-            i.fab.fa-github
-        | Continue with Github
-    button.socila-login__facebook
-        span
-            i.fab.fa-facebook
-        | Continue with Facebook
+    button.social-login--github
+        a(href=routes.github)
+            span
+                i.fab.fa-github
+            | Continue with Github
+    button.social-login--facebook
+        a(href=routes.facebook)
+            span
+                i.fab.fa-facebook
+            | Continue with Facebook
