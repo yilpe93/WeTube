@@ -3,16 +3,17 @@
 Cloninig Youtube with Vanilla and NodeJS
 
 ## Pages:
-- [ ] Home
-- [x] Join
-- [x] Login
-- [x] Search
-- [ ] User Detail
-- [ ] Edit Profile
-- [ ] Change Password
-- [ ] Upload
-- [ ] Video Detail
-- [ ] Edit Video
+
+-   [x] Home
+-   [x] Join
+-   [x] Login
+-   [x] Search
+-   [x] User Detail
+-   [x] Edit Profile
+-   [x] Change Password
+-   [x] Upload
+-   [x] Video Detail
+-   [x] Edit Video
 
 <!--
 # Websites VS Webapps
@@ -38,7 +39,7 @@ Cloninig Youtube with Vanilla and NodeJS
 ### devDependencies
 프로젝트의 실행과 관련없는 것을 설치하고 싶다면 혹은 개발의 편의를 위한 요소를 포함
 
---- 
+---
 
 # Server
 Connection - Listen - File 처리 - html 저장 - 데이터베이스 저장 - Form 데이터
@@ -161,6 +162,52 @@ dotenv.config();
 # file을 Upload하여 URL을 반환하는 middleware
 $npm i multer
 ```
+
+---
+
+# Webpack
+대표적인 Module bundler, 파일을 넘겨주면 webpack은 그것들을 완전히 호환되는 `static 파일`들로 변환
+
+## webpack과 webpack-cli 차이
+- webpack 파일에서 webpack을 사용하기 위함
+- webpack-cli는 터미널에서 webpack을 쓸 수 있게하기 위함
+
+## 규칙
+1. webpack은 `exported configuration object`를 찾는 것
+2. config 파일 안에서 명심해할 것은, server 코드와 연관시키지 않을 것
+
+## 요소
+- entry: 파일들이 어디서 왔는가
+- output: 파일들을 어디에 넣을까
+
+---
+
+# Polyfill
+브라우저에 아직 없는 무언가를 보유하고 있는 것,
+브라우저의 구멍을 매워주는 자바스크립트 파일
+
+---
+
+# Passport [Middleware]
+사용자 인증을 구현
+- 인증: 브라우저 상에 쿠키를 설정
+
+## passport-local Mongoose
+
+# 인증
+1. username과 password를 post 방식으로 전달
+2. passport-local Mongoose 플러그인이 자동으로 password를 체크해주어 맞으면 맞다고 알려주고 passport는 쿠키를 생성
+
+## github 인증
+1. 사용자는 깃헙 웹사이트로 이동 후 권한 승인
+2. 깃헙 웹사이트 -> 사용자의 정보를 "/auth/github/callback" URL로 전달
+3. githubLoginCallback (profile) => ch(error, user) or [if (user)] cb(null, user) => makeCookie, saveCookie, sendCookie -> browser
+
+---
+
+# Localtunnel
+로컬 서버에 https 터널을 만들어 줌
+
 
 ---
 
